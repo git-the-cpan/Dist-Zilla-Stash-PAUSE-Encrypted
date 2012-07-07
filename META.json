@@ -49,10 +49,10 @@
    "provides" : {
       "Dist::Zilla::Stash::PAUSE::Encrypted" : {
          "file" : "lib/Dist/Zilla/Stash/PAUSE/Encrypted.pm",
-         "version" : "0.001"
+         "version" : "0.002"
       }
    },
-   "release_status" : "testing",
+   "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
          "web" : "https://github.com/RsrchBoy/dist-zilla-stash-pause-encrypted/issues"
@@ -63,7 +63,7 @@
          "web" : "https://github.com/RsrchBoy/dist-zilla-stash-pause-encrypted"
       }
    },
-   "version" : "0.001",
+   "version" : "0.002",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
@@ -355,7 +355,7 @@
       "zilla" : {
          "class" : "Dist::Zilla::Dist::Builder",
          "config" : {
-            "is_trial" : "1"
+            "is_trial" : "0"
          },
          "version" : "4.300020"
       }

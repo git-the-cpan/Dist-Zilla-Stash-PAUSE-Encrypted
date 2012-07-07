@@ -3,7 +3,7 @@ NAME
     encrypted!
 
 VERSION
-    This document describes version 0.001 of
+    This document describes version 0.002 of
     Dist::Zilla::Stash::PAUSE::Encrypted - released July 07, 2012 as part of
     Dist-Zilla-Stash-PAUSE-Encrypted.
 
@@ -11,11 +11,7 @@ SYNOPSIS
         # ...do the GPG magicky things described by Config::Identity, then:
 
         # in your ~/.dzil/config.ini
-        [%PAUSE::Encrypted]
-
-        # then in dist.ini -- yeah, I don't know why it isn't documented either
-        [UploadToCPAN]
-        credentials_stash = %PAUSE::Encrypted
+        [%PAUSE::Encrypted / %PAUSE]
 
 DESCRIPTION
     This is a simple extension of Dist::Zilla::Stash::PAUSE to use
@@ -29,6 +25,8 @@ SEE ALSO
     *   Config::Identity
 
     *   Dist::Zilla::Stash::PAUSE
+
+    *   Dist::Zilla::Plugin::UploadToCPAN
 
 SOURCE
     The development version is on github at
