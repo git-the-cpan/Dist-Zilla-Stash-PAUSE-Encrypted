@@ -1,0 +1,47 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.68.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 27a2398d8751d45f5130959d0da79a03a5ca495f Changes
+SHA1 8e1b2f8d0d13c6e266d735b33d7575393f69fcb7 INSTALL
+SHA1 6e7bb500dc8b55faaa11daa64e16fa164e069a1e MANIFEST
+SHA1 91e62b1b9c826de725164c8862fb2ef715c608f5 META.json
+SHA1 69cd3ab098d33a5f011dfd745e4229ea9a894373 META.yml
+SHA1 5d4b0e7ccde7ec01d0504401740d7201345b0a13 Makefile.PL
+SHA1 1aef4c554f559e44a3c5bb8f68a768e4352256ea README
+SHA1 e1e6bf30d35d5707dc3a8b631417892b29b29b12 dist.ini
+SHA1 ac24a8d052178afa144472de64c66cc4d843a523 lib/Dist/Zilla/Stash/PAUSE/Encrypted.pm
+SHA1 7e06d71415071ec987eeb4c06e72a1f034090ea4 t/00-compile.t
+SHA1 922d1d4f39e4ed28d0d5a3495eadd2e6e2545687 t/000-report-versions-tiny.t
+SHA1 8d9443adf9dd660b886192158b5af0c55bfacf9f t/author-pod-spell.t
+SHA1 9c3627ff37f4fd5bddc34bf46cf3359eaf76a060 t/release-consistent-version.t
+SHA1 a032c41ef6887fab1b900669c2d304fab46680e2 t/release-eol.t
+SHA1 011d4c9b220d6ec7292fd2a77cd3578edb344e83 t/release-has-version.t
+SHA1 5339300ce8506e9aad181c85f20a1ac26668fab7 t/release-no-smart-comments.t
+SHA1 455d1dd1867212a665ad5ea4126b572411de300c t/release-no-tabs.t
+SHA1 6b1a65da83d245f67cffd74515ea53fa70a29c20 t/release-pod-coverage.t
+SHA1 a2e41163f9a0e5ef495c3a4f12b8d3a563311786 t/release-pod-syntax.t
+SHA1 c7325bdcd20c9729339a5d22bf04a19e7a051ece t/release-portability.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.12 (GNU/Linux)
+
+iQEcBAEBAgAGBQJP9+64AAoJEOd5N1CvIgQkbP0IAINzpHLQX6mAuqIy02tmlSg1
+fJ7Fg2vzPWMYtS/Yp4uxEO61tdXWei/WnD+lRq6bIqkamifPzSUBAeWvRruAFkte
+7urq/wulZUroQsJORHKqqv+b4jvf3vCi/9f9/FwSnBGaQ2OMrCYtcoX6U9VI6po4
+X5q4OroKh/oi1keeEJ9wSpnGuKIB6MAQCdADgG+QhIjdLnqwVxjfSJeKPZxbPWGo
+Hqe6up5oFI0PxVXeXz1tehEbPDyFi2TmFn3C9st4gcenhA3VYOSpn9IxoC03c+UB
+pyj1B0ZgPieXR2jz8umMkZxFd+/+9tsbYXIPp9ZS0jHLSptZarKXWy+Oj7UeRmk=
+=JG3B
+-----END PGP SIGNATURE-----
