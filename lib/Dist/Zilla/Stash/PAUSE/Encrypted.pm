@@ -9,7 +9,7 @@
 #
 package Dist::Zilla::Stash::PAUSE::Encrypted;
 {
-  $Dist::Zilla::Stash::PAUSE::Encrypted::VERSION = '0.002';
+  $Dist::Zilla::Stash::PAUSE::Encrypted::VERSION = '0.003';
 }
 
 # ABSTRACT: Keep your PAUSE bits safely encrypted!
@@ -17,26 +17,25 @@ package Dist::Zilla::Stash::PAUSE::Encrypted;
 use Moose;
 use namespace::autoclean;
 use MooseX::AttributeShortcuts;
-use Moose::Util::TypeConstraints 'class_type';
 
 use Config::Identity::PAUSE;
 
 extends 'Dist::Zilla::Stash::PAUSE';
 
-#has _identity => ( is => 'lazy', isa => class_type('Config::Identity::PAUSE'),
-
-has "+$_" => (traits => [Shortcuts], writer => "_set_$_", required => 0, init_arg => undef)
+has "+$_" => (traits => [Shortcuts], lazy => 1, builder => 1, required => 0)
     for qw{ username password };
 
-sub BUILD {
-    my ($self) = @_;
+has identity => (
+    traits  => ['Hash'],
+    is      => 'lazy',
+    isa     => 'HashRef',
+    handles => {
+        _build_username => [ get => 'username' ],
+        _build_password => [ get => 'password' ],
+    },
+);
 
-    my %id = Config::Identity::PAUSE->load;
-    $self->_set_username($id{user});
-    $self->_set_password($id{password});
-
-    return;
-}
+sub _build_identity { my %id = Config::Identity::PAUSE->load; \%id }
 
 __PACKAGE__->meta->make_immutable;
 !!42;
@@ -54,7 +53,7 @@ Dist::Zilla::Stash::PAUSE::Encrypted - Keep your PAUSE bits safely encrypted!
 
 =head1 VERSION
 
-This document describes version 0.002 of Dist::Zilla::Stash::PAUSE::Encrypted - released July 07, 2012 as part of Dist-Zilla-Stash-PAUSE-Encrypted.
+This document describes version 0.003 of Dist::Zilla::Stash::PAUSE::Encrypted - released July 13, 2012 as part of Dist-Zilla-Stash-PAUSE-Encrypted.
 
 =head1 SYNOPSIS
 

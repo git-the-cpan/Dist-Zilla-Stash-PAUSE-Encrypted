@@ -24,19 +24,18 @@ no_index:
 provides:
   Dist::Zilla::Stash::PAUSE::Encrypted:
     file: lib/Dist/Zilla/Stash/PAUSE/Encrypted.pm
-    version: 0.002
+    version: 0.003
 requires:
   Config::Identity::PAUSE: 0
   Dist::Zilla::Stash::PAUSE: 0
   Moose: 0
-  Moose::Util::TypeConstraints: 0
   MooseX::AttributeShortcuts: 0
   namespace::autoclean: 0
   perl: 5.006
 resources:
   bugtracker: https://github.com/RsrchBoy/dist-zilla-stash-pause-encrypted/issues
   repository: git://github.com/RsrchBoy/dist-zilla-stash-pause-encrypted.git
-version: 0.002
+version: 0.003
 x_Dist_Zilla:
   plugins:
     -
@@ -170,11 +169,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
       name: '@RSRCHBOY/ReportVersions::Tiny'
-      version: 1.03
+      version: 1.04
     -
       class: Dist::Zilla::Plugin::GitHub::Meta
       name: '@RSRCHBOY/GitHub::Meta'
-      version: 0.23
+      version: 0.25
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@RSRCHBOY/MetaConfig'
@@ -214,7 +213,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::GitHub::Update
       name: '@RSRCHBOY/GitHub::Update'
-      version: 0.23
+      version: 0.25
     -
       class: Dist::Zilla::Plugin::Signature
       name: '@RSRCHBOY/Signature'

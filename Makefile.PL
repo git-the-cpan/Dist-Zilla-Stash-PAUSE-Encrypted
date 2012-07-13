@@ -29,11 +29,10 @@ my %WriteMakefileArgs = (
     "Config::Identity::PAUSE" => 0,
     "Dist::Zilla::Stash::PAUSE" => 0,
     "Moose" => 0,
-    "Moose::Util::TypeConstraints" => 0,
     "MooseX::AttributeShortcuts" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.002",
+  "VERSION" => "0.003",
   "test" => {
     "TESTS" => "t/*.t"
   }
